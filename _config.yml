@@ -2,7 +2,7 @@ title:              Ayush Mahapatra
 email:              ayushmahapatra97@gmail.com
 description:        Website
 author:             Ayush Mahapatra
-baseurl:            "ayush_mahapatra_website"
+baseurl:            "/ayush_mahapatra_website"
 url:                "https://ayumahapat0.github.io"
 
 # Social Profiles
