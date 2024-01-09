@@ -4,7 +4,7 @@ description:        Website
 author:             Ayush Mahapatra
 baseurl:            ""
 url:                "https://ayumahapat0.github.io"
-theme:              "jekyll-theme-clean-blog"
+theme:              spec.name
 
 # Social Profiles
 twitter_username:  
