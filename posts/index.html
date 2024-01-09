@@ -1,13 +1,13 @@
 ---
 layout: page
 title: Posts
-background: '/assets/images/Contact.jpg'
+background: '/Users/2monkey3/Desktop/dummy/startbootstrap-clean-blog-jekyll/assets/images/Contact.jpg'
 ---
 
 {% for post in paginator.posts %}
 
 <article class="post-preview">
-  <a href="{{ post.url | replace: '//', '/' }}">
+  <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
     <h2 class="post-title">{{ post.title }}</h2>
     {% if post.subtitle %}
     <h3 class="post-subtitle">{{ post.subtitle }}</h3>
