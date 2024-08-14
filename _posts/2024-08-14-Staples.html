@@ -1,0 +1,86 @@
+---
+layout: post
+title: "My Staples Internship"
+date: 2024-08-14 23:45:13 -0400
+background: '/assets/images/Staples_Internship.jpeg'
+---
+
+<h2>
+    My Team
+ </h2>
+ 
+ 
+ <p>
+    During the summer of 2024, I got accepted into Staples Internship program as a Software Engineering Intern in the Staples Digital Solutions division.
+    As a SWE intern, I worked under the Order to Cash Team, which is a part of their Financial Services Team. I loved working with my team!
+    My manager was Tanu Khanna, who did an amazing job of making me feel comfortable and get acclimated with Staples workflow and culture. My mentor
+    during this internship was Thuccy Nyguen, who had previously gone through this internship program. She was wonderful in helping me Debug my code and
+    understand Staples Technology stack. Another person who assisted me was my project partner, Ramya Akkipali, who was integral in deloading the work for my project.
+    Tanu and Thuccy were both instrumental in developing my programming skills and soft skills, such as presentation skills during Stand Up meetings and Demos.
+    When Ramya was added to the project late, it challenged me to understand how to effectively illustrate the purpose of a project, as well as learn how to be patient
+    when helping someone get caught up on a project.
+ </p>
+ 
+ 
+ <h2>
+   Project: Warranty Activation AKS HP Migration
+ </h2>
+ 
+ 
+ <p>
+   At Staples, they are moving away from physical hardware to storing information and are now using Microsoft Azure Services. One
+   of the services that Staples utilizes is the Microsoft Azure Service Bus. The Service Bus is a software tool that holds Message
+   Queues. These queues hold messages in specific formats, such as XML, JSON, or regular Text. Staples is using this Azure Service
+   in order to receive messages about warranty activation or cancellation of third party technology projects from Apple, HP, and Brother.
+ 
+ 
+   The goal of my project was to migrate Staples warranty activation and cancellation service to shift from using XML messages
+   and use the Ingram Micro Reseller API to notify Ingram Micro to either create this warranty activation or cancel it for HP. The warranty activation
+   and cancellation program was a Spring Boot Microservice.
+ </p>
+ 
+ 
+ <h3>
+    Project Design
+ </h3>
+ 
+ 
+ <p>
+    The Service Bus receives an xml message to either activate or cancel warranty of an HP product. This message contains many business details, such as
+    business unit, transaction type, address to ship to, etc. This message is sent to the Warranty Request messaging queue. This message is then consumed
+    by Staples' warranty request process Spring Boot Microservice that then validates the request and then saves the transaction details, services, address,
+    and header details in Staple's Database. This Microservice then sends a message to the Warranty Activation queue, which is then consumed by Staples warranty
+    activation Microservice. The Microservice then calls utilizes the Ingram Micro Reseller API to either activate or cancel warranty for an HP product, depending
+    on the request. Finally, the response from the API is then saved into Staple's Database. To get a full picture of my project's design, refer to slide 8 below.
+ </p>
+ 
+ 
+ <iframe src="https://docs.google.com/presentation/d/1pkbNO7fAKeXWJBB2L-TueYf6jQYMTzSTeWdXIbQDFk8/edit?usp=sharing" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+ 
+ 
+ <h2>
+    Reflection of Project + Internship Experience
+ </h2>
+ 
+ 
+ <p>
+    This was my first time working with Springboot, so it was a learning curve understand how to utilize feign clients, Spring Boot Beans, Web Security, as well as understanding
+    Springboot's unique advantage of autoconfiguration. In addition, I learned about how to use an API that uses Oauth2.0 client credential security flow. It was also
+    my first time using Microsoft Azure services, so it was amazing to learn and use such advanced and effective software technology that will continue to be used in the future,
+    and I am grateful that Staples provided me with a comfortable environment to challenge my technology skills and improved them. In the end, I got to curate a presentation in front
+    of Matt Johnson, CIO of Staples, my manager, my mentor, and many other leaders in Staple's Digital Solutions Division.
+ 
+ 
+    Staples also provided 'Career Readiness Sessions', which were information sessions where learned many important skills and concepts for our future careers,
+    such as Networking, Interview and presentation skills, emotional intelligence, Resume crafting, and etc. Getting exclusive information to these skill sets
+    has prepared me well for my career moving forward.
+ 
+ 
+    I am so grateful for Staples to be my first internship experience as I learned so many different skill sets and concepts that have been imperative in my development
+    as a computer scientist and as a person.
+ 
+ 
+    Thank you Staples for the incredible opportunity!
+ 
+</p>
+
