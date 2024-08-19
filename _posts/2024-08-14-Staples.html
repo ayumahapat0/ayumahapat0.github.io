@@ -48,23 +48,25 @@ background: '/assets/images/Staples_Internship.jpeg'
  <h3>
     Project Design
  </h3>
- 
- 
+
+ <div class="row">
+    <div class="column">
+        <img src="{{ site.baseurl }}/assets/images/Warranty_AKS_Flow.png" alt="" style="width:100%" onclick="expandImage(this, 'expandedImgBNPS', 'imgtextBNPS');">
+    </div>
+</div> 
+
  <p>
     The Service Bus receives an xml message to either activate or cancel warranty of an HP product. This message contains many business details, such as
     business unit, transaction type, address to ship to, etc. This message is sent to the Warranty Request messaging queue. This message is then consumed
     by Staples' warranty request process Spring Boot Microservice that then validates the request and then saves the transaction details, services, address,
-    and header details in Staple's Database. This Microservice then sends a message to the Warranty Activation queue, which is then consumed by Staples warranty
+    and header details in Staple's Database. 
+ </p>
+
+ <p>
+    This Microservice then sends a message to the Warranty Activation queue, which is then consumed by Staples warranty
     activation Microservice. The Microservice then calls utilizes the Ingram Micro Reseller API to either activate or cancel warranty for an HP product, depending
     on the request. Finally, the response from the API is then saved into Staple's Database. 
  </p>
- 
- 
-<div class="row">
-    <div class="column">
-        <img src="/assets/images/Warranty_AKS_Flow.png" alt="" style="width:100%" onclick="expandImage(this, 'expandedImgBNPS', 'imgtextBNPS');">
-      </div>
-</div> 
  
  <h2>
     Reflection of Project + Internship Experience
